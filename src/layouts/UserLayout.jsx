@@ -41,16 +41,16 @@ const UserLayout = (props) => {
           <div className={styles.top}>
             <div className={styles.header}>
               <Link to="/">
-                <img alt="logo" className={styles.logo} src={logo} />
-                <span className={styles.title}>Ant Design</span>
+                {/* <img alt="logo" className={styles.logo} src={logo} /> */}
+                <span className={styles.title}>Express+Mongodb 最简单的全栈框架</span>
               </Link>
             </div>
-            <div className={styles.desc}>
+            {/* <div className={styles.desc}>
               <FormattedMessage
                 id="pages.layouts.userLayout.title"
                 defaultMessage="Ant Design 是西湖区最具影响力的 Web 设计规范"
               />
-            </div>
+            </div> */}
           </div>
           {children}
         </div>

@@ -33,6 +33,7 @@ const Login = (props) => {
 
   const handleSubmit = (values) => {
     const { dispatch } = props;
+    console.log(values);
     dispatch({
       type: 'login/login',
       payload: { ...values, type },
@@ -68,20 +69,20 @@ const Login = (props) => {
               defaultMessage: '账户密码登录',
             })}
           />
-          <Tabs.TabPane
+          {/* <Tabs.TabPane
             key="mobile"
             tab={intl.formatMessage({
               id: 'pages.login.phoneLogin.tab',
               defaultMessage: '手机号登录',
             })}
-          />
+          /> */}
         </Tabs>
 
         {status === 'error' && loginType === 'account' && !submitting && (
           <LoginMessage
             content={intl.formatMessage({
               id: 'pages.login.accountLogin.errorMessage',
-              defaultMessage: '账户或密码错误（admin/ant.design)',
+              defaultMessage: '账户或密码错误',
             })}
           />
         )}
@@ -95,7 +96,7 @@ const Login = (props) => {
               }}
               placeholder={intl.formatMessage({
                 id: 'pages.login.username.placeholder',
-                defaultMessage: '用户名: admin or user',
+                defaultMessage: '用户名:用户名',
               })}
               rules={[
                 {
@@ -117,7 +118,7 @@ const Login = (props) => {
               }}
               placeholder={intl.formatMessage({
                 id: 'pages.login.password.placeholder',
-                defaultMessage: '密码: ant.design',
+                defaultMessage: '密码:',
               })}
               rules={[
                 {
